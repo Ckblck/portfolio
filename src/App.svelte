@@ -5,26 +5,28 @@
 </script>
 
 <svelte:head>
-    <html lang="en"></html>
+    <html lang="en" />
     <title>Ckblck</title>
-    <script src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js" type="module"></script>
+    <script
+        src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
+        type="module"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Yantramanav:wght@300&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,500;1,500&display=swap');
+        @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500&display=swap");
+        @import url("https://fonts.googleapis.com/css2?family=Yantramanav:wght@300&display=swap");
+        @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,500;1,500&display=swap");
     </style>
 </svelte:head>
 
 <main>
-    <MainSection/>
-    <QualificationsSection/>
-    <ProjectsSection/>
+    <MainSection />
+    <QualificationsSection />
+    <ProjectsSection />
 </main>
 
 <style>
     /* reset */
 
-    :global(*::before,*::after,*) {
+    :global(*::before, *::after, *) {
         box-sizing: border-box;
     }
 
@@ -57,6 +59,7 @@
         --main-clr: #ffbf00;
         --select-clr: #124e97;
         --status-clr: #0078d7;
+        --light-pure: #fff280;
 
         --ff-primary: "Raleway", Arial;
         --ff-secondary: "Yantramanav", Sans;

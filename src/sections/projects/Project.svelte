@@ -1,5 +1,5 @@
 <script>
-    import {fly} from "svelte/transition";
+    import { fly } from "svelte/transition";
     import TagContainer from "./TagContainer.svelte";
 
     export let projectObj;
@@ -7,26 +7,31 @@
 
 <div class="project-header">
     {#key projectObj}
-        <h1 in:fly={{x: -100, duration: 500}} class="project-title">
+        <h1 in:fly={{ x: -100, duration: 500 }} class="project-title">
             {projectObj.name}
         </h1>
-        <h2 in:fly={{x: -100, duration: 400}} class="project-status padded">
+        <h2 in:fly={{ x: -100, duration: 400 }} class="project-status padded">
             {#if projectObj.link}
-                <a class="except" href={projectObj.link} target="_blank">{projectObj.status}</a>
+                <a class="except" href={projectObj.link} target="_blank"
+                    >{projectObj.status}</a
+                >
                 <span class="link-span">
-                    <img src="assets/external_link.svg" alt="Icon symbolizing an external link.">
+                    <img
+                        src="assets/external_link.svg"
+                        alt="Icon symbolizing an external link."
+                    />
                 </span>
             {:else}
                 {projectObj.status}
             {/if}
         </h2>
-        <TagContainer {projectObj}/>
+        <TagContainer {projectObj} />
     {/key}
 </div>
 <div class="project-content padded flex">
     <div class="project-text flex">
         {#key projectObj}
-            <div in:fly={{duration: 500}}>
+            <div in:fly={{ duration: 500 }}>
                 {@html projectObj.description}
             </div>
         {/key}
@@ -52,7 +57,17 @@
         font-size: 0.95rem;
         font-weight: 400;
         margin-top: 0;
-        margin-bottom: .5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    :global(.project-text a) {
+        background: transparent url(/assets/external_link.svg) center right
+            no-repeat;
+        padding-right: 0.85em;
+    }
+
+    :global(.project-text ul) {
+        margin: 0;
     }
 
     .except {
@@ -61,8 +76,10 @@
         color: var(--status-clr);
     }
 
-    .link-span {
+    :global(.link-span) {
         cursor: pointer;
+        width: 14px;
+        height: 14px;
     }
 
     .link-span img {
@@ -73,14 +90,14 @@
     .project-content {
         flex-wrap: wrap;
         flex-shrink: 1;
-        margin: 2em 0;
+        margin: 1.5em 0;
         gap: 1em;
     }
 
     .project-text {
         overflow-y: auto;
         flex: 1 1 40ch;
-        max-width: 40ch;
+        max-width: 60ch;
         margin-right: auto;
     }
 
@@ -92,16 +109,34 @@
     }
 
     :global(.project-text h1) {
-        color: var(--dark-light);
+        color: var(--dark-pure);
         padding-right: 2em;
-        font-size: 1.5rem;
+        font-size: 1.6rem;
         font-weight: 600;
-        margin-bottom: .25em;
+        margin-bottom: 0.25em;
+    }
+
+    :global(.project-text a) {
+        text-decoration: underline;
+        text-decoration-style: dotted;
+        text-decoration-color: var(--select-clr);
+        text-decoration-thickness: 1.5px;
+    }
+
+    :global(.project-text u) {
+        text-decoration-skip-ink: all;
+        text-decoration-thickness: 1.5px;
+        text-decoration-skip: spaces ink;
+    }
+
+    :global(.project-text li) {
+        list-style-type: "↪";
+        padding-inline-start: 0.75ch;
     }
 
     :global(.project-text p) {
-        margin-block-start: .5em;
-        margin-block-end: .5em;
+        margin-block-start: 0.5em;
+        margin-block-end: 0.5em;
         word-wrap: break-word;
     }
 
@@ -110,7 +145,7 @@
     }
 
     .project-technologies {
-        padding: 1.5em 2.5em 5em 1.75em;
+        padding: 1.5em 2.5em 1.5em 1.75em;
         border: 2px solid var(--dark-pure);
     }
 
@@ -128,5 +163,13 @@
 
     .project-tech-list li {
         margin-bottom: 0.2em;
+        list-style-type: "⤷";
+        padding-inline-start: 1ch;
+    }
+
+    @media (max-width: 450px) {
+        .project-technologies {
+            margin: auto;
+        }
     }
 </style>

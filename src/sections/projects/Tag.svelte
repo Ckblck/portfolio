@@ -15,9 +15,14 @@
         height: 100%;
         white-space: nowrap;
         color: black;
-        padding: .15em .2em;
-        margin-block-start: .25em;
-        margin-right: .25em;
+        padding: 0.15em 0.2em;
+        margin-block-start: 0.25em;
+        margin-right: 0.25em;
         background-color: #ffbf00;
+        transition: background-color 0.1s;
+    }
+
+    .tag:hover {
+        background-color: var(--light-pure);
     }
 </style>
