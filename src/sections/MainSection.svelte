@@ -72,7 +72,7 @@
 <style>
     :global(section) {
         scroll-snap-align: center;
-        padding: 4em 7vw;
+        padding: 4em 7vw 4em clamp(5em, 10vw, 50em);
     }
 
     .header {
@@ -92,35 +92,42 @@
     }
 
     .wave {
-        animation-name: wave-animation;
-        animation-duration: 2.5s;
-        animation-iteration-count: 1;
-        transform-origin: 70% 70%;
         display: inline-block;
+        animation-name: wave-animation;
+        animation-duration: 2.25s;
+        animation-iteration-count: 2;
+        transform-origin: 70% 70%;
     }
 
     @keyframes wave-animation {
         0% {
             transform: rotate(0deg);
         }
+
         10% {
             transform: rotate(14deg);
         }
+
         20% {
             transform: rotate(-8deg);
         }
+
         30% {
             transform: rotate(14deg);
         }
+
         40% {
             transform: rotate(-4deg);
         }
+
         50% {
             transform: rotate(10deg);
         }
+
         60% {
             transform: rotate(0deg);
-        } /* Reset for the last half to pause */
+        }
+
         100% {
             transform: rotate(0deg);
         }

@@ -7,27 +7,28 @@
         {
             title: "+3 years of Spigot API experience.",
             description:
-                "The plugin development journey started in Q3 2019. In just a couple of months, several projects with different complexities were already on track. Concurrently, multiple technologies were progressively being experienced and learned.",
+                "The plugin development journey started in <b>Q3 2019</b>. In just a couple of months, several projects with different complexities were already on track. Concurrently, multiple technologies were progressively being experienced and learned.",
         },
         {
-            title: "Database knowledge",
+            title: "Database and REST APIs knowledge",
             description:
-                '<p class="point-info"> Having chosen different types of projects allowed me to get in touch with new approaches. </p> <p class="point-info"> MySQL, Redis, MongoDB, YML, and JSON were technologies I successfully used and implemented across all projects.</p>',
+                '<p class="point-info"> <b>MySQL</b>, <b>Redis</b>, <b>MongoDB</b>, <b>YML</b>, and <b>JSON</b> were some of the technologies I successfully used and implemented across my projects.</p>' +
+                '<p class="point-info">As regards <b>REST APIs</b>, I have successfully managed to develop several applications written in <b>Go</b> or <b>Java</b> to meet some specific project requirements.</p>',
         },
         {
             title: "Previous experience in the field.",
             description:
-                '<p class="point-info">Working at <a  target="_blank" href="https://www.minecub.es/" >Minecub</a > during 2020 prepared me to deal with the implications of demanding tasks and responsibilities. One of my duties was to develop and maintain a plugin to fight off cheaters. Some of its features were: </p><ul class="point-info"> <li>Minecraft client detection</li> <li> Verus API hook, implementing automatic bans </li> <li> Cross-server database update with Redis </li> <li> Customized checks for the detection of CivBreak in the Annihilation mode </li> <li>Banwaves</li> </ul><p class="point-info"> Moreover, this enriching experience allowed me to work, exchange and broaden my knowledge with other developers.</p>',
+                '<p class="point-info">Working at <a  target="_blank" href="https://www.minecub.es/" >Minecub</a > during 2020 prepared me to deal with the implications of demanding tasks and responsibilities. One of my duties was to develop and maintain a plugin to fight off cheaters.</p> <p>Some of its features were:</p><ul class="point-info"> <li>Minecraft client detection</li> <li> Verus API hook, implementing automatic bans </li> <li> Cross-server database update with Redis </li> <li> Customized checks for the detection of CivBreak in the Annihilation mode </li> <li>Banwaves</li> </ul><p class="point-info"> Moreover, this enriching experience allowed me to work, exchange and broaden my knowledge with other developers.</p>',
         },
         {
             title: "HTML, CSS, JS & Svelte grasp.",
             description:
-                '<p class="point-info"> I am capable of designing basic websites featuring responsiveness and efficiency. </p> <p class="point-info"> If you rather, you may check this website\'s source code on <a  target="_blank" href="https://github.com/Ckblck/portfolio" >GitHub</a >.</p>',
+                '<p class="point-info">I am capable of designing basic websites featuring <b>responsiveness</b> and <b>efficiency</b>. </p> <p class="point-info"> If you rather, you may check this website\'s source code on <a  target="_blank" href="https://github.com/Ckblck/portfolio" >GitHub</a >.</p>',
         },
         {
             title: "C1 English Level.",
             description:
-                '<p class="point-info"> I have been learning English since I was three years old. In 2022, I sat for the <a  target="_blank" href="https://www.cambridgeenglish.org/exams-and-tests/advanced/" >Cambridge C1 Advanced Exam</a >.</p>',
+                '<p class="point-info">I have been learning English since I was three years old. In 2022, I sat for the <a  target="_blank" href="https://www.cambridgeenglish.org/exams-and-tests/advanced/" >Cambridge C1 Advanced Exam</a >, scoring 198 out of 200.</p>',
         },
     ];
 </script>

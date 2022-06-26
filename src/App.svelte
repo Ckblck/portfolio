@@ -2,6 +2,8 @@
     import MainSection from "./sections/MainSection.svelte";
     import QualificationsSection from "./sections/QualificationsSection.svelte";
     import ProjectsSection from "./sections/ProjectsSection.svelte";
+    import ContactSection from "./sections/ContactSection.svelte";
+    import Footer from "./sections/Footer.svelte";
 </script>
 
 <svelte:head>
@@ -10,6 +12,7 @@
     <script
         src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
         type="module"></script>
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.png" />
     <style>
         @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500&display=swap");
         @import url("https://fonts.googleapis.com/css2?family=Yantramanav:wght@300&display=swap");
@@ -17,11 +20,13 @@
     </style>
 </svelte:head>
 
+<ContactSection />
 <main>
     <MainSection />
     <QualificationsSection />
     <ProjectsSection />
 </main>
+<Footer />
 
 <style>
     /* reset */
@@ -30,7 +35,7 @@
         box-sizing: border-box;
     }
 
-    :global(h1, body) {
+    :global(h1) {
         margin: 0;
         padding: 0;
     }
@@ -85,7 +90,6 @@
     }
 
     :global(main) {
-        height: 100vh;
         font-family: var(--ff-primary);
         color: var(--dark-pure);
     }

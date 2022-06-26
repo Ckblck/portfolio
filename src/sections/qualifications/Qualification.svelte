@@ -1,5 +1,5 @@
 <script>
-    import {slide} from "svelte/transition";
+    import { slide } from "svelte/transition";
 
     export let qualificationObj;
 
@@ -37,6 +37,8 @@
 
     :global(.point-info li) {
         font-size: 1.15rem;
+        list-style-type: "↪";
+        padding-inline-start: 1ch;
     }
 
     :global(.point-info li::marker) {

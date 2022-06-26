@@ -147,6 +147,7 @@
     .project-technologies {
         padding: 1.5em 2.5em 1.5em 1.75em;
         border: 2px solid var(--dark-pure);
+        border-radius: 2px;
     }
 
     .project-tech-title {
@@ -167,8 +168,9 @@
         padding-inline-start: 1ch;
     }
 
-    @media (max-width: 450px) {
+    @media (max-width: 650px) {
         .project-technologies {
+            padding: 5% 8% 5% 5.75%;
             margin: auto;
         }
     }
