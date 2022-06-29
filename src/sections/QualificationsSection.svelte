@@ -65,7 +65,7 @@
                 on:mouseleave={() => (attribution = false)}
                 on:mouseover={() => (attribution = true)}
             >
-                <span class="dotted">Attribution</span>
+                <span class="attribution-title dotted">Attribution</span>
                 {#if attribution}
                     <div class="attribution">
                         <a
@@ -120,10 +120,11 @@
 
     .model {
         width: inherit;
-        height: 60vh;
+        height: clamp(15em, 15em, 32vh);
     }
 
     .attribution-button {
+        position: relative;
         margin-top: 0.25em;
         cursor: help;
         font-weight: 600;
@@ -133,7 +134,7 @@
     .dotted {
         display: block;
         text-align: center;
-        font-size: 1.35rem;
+        font-size: 1.25rem;
         font-family: var(--ff-secondary);
         color: var(--dark-light);
         text-decoration: underline;
@@ -141,13 +142,15 @@
     }
 
     .attribution {
+        position: absolute;
         cursor: text;
         user-select: text;
-        margin-top: 1em;
+        margin-top: 0.5em;
         font-family: var(--ff-secondary);
         font-size: 1rem;
-        text-align: end;
+        text-align: center;
         color: var(--dark-light);
+        max-width: 30ch;
     }
 
     .attribution a {

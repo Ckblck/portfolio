@@ -2,7 +2,7 @@
     import MainSection from "./sections/MainSection.svelte";
     import QualificationsSection from "./sections/QualificationsSection.svelte";
     import ProjectsSection from "./sections/ProjectsSection.svelte";
-    import ContactSection from "./sections/ContactSection.svelte";
+    import ContactSection from "./sections/contact/ContactSection.svelte";
     import Footer from "./sections/Footer.svelte";
 </script>
 
@@ -29,6 +29,12 @@
 <Footer />
 
 <style>
+    :global(section) {
+        scroll-snap-align: center;
+        min-height: 100vh;
+        padding: 4em 7vw 4em clamp(5em, 10vw, 50em);
+    }
+
     /* reset */
 
     :global(*::before, *::after, *) {

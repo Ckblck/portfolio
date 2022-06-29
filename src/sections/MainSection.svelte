@@ -14,7 +14,7 @@
     }, 1500);
 </script>
 
-<section>
+<section class="section flex">
     <div class="header flex">
         <div class="profile-icon">
             <svg
@@ -70,13 +70,17 @@
 </section>
 
 <style>
-    :global(section) {
-        scroll-snap-align: center;
-        padding: 4em 7vw 4em clamp(5em, 10vw, 50em);
+    .section {
+        flex-direction: column;
+        justify-content: center;
     }
 
     .header {
-        margin-bottom: 5em;
+        margin-bottom: auto;
+    }
+
+    .intro {
+        margin-bottom: auto;
     }
 
     .intro-text {
@@ -95,8 +99,17 @@
         display: inline-block;
         animation-name: wave-animation;
         animation-duration: 2.25s;
-        animation-iteration-count: 2;
+        animation-iteration-count: 1;
         transform-origin: 70% 70%;
+        cursor: pointer;
+    }
+
+    .wave:hover {
+        -webkit-animation: wave-animation 2.25s infinite;
+        -moz-animation: wave-animation 2.25s infinite;
+        -ms-animation: wave-animation 2.25s infinite;
+        -o-animation: wave-animation 2.25s infinite;
+        animation: wave-animation 2.25s infinite;
     }
 
     @keyframes wave-animation {
