@@ -9,6 +9,21 @@
 <svelte:head>
     <html lang="en" />
     <title>Ckblck</title>
+
+    <meta charset="utf-8" />
+    <meta
+        name="description"
+        content="Personal portfolio of Ckblck, a Java programmer who develops Spigot plugins."
+    />
+    <meta
+        name="keywords"
+        content="spigot, plugins, developer, java, minecraft"
+    />
+    <meta property="og:title" content="Ckblck" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/assets/profile-icon.svg" />
+    <meta property="og:url" content="https://ckblck.dev" />
+
     <script
         src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
         type="module"></script>
