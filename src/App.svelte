@@ -30,6 +30,8 @@
 
 <style>
     :global(section) {
+        flex-direction: column;
+        justify-content: center;
         scroll-snap-align: center;
         min-height: 100vh;
         padding: 4em 7vw 4em clamp(5em, 10vw, 50em);

@@ -108,43 +108,10 @@
         font-size: 1.4rem;
     }
 
-    :global(.project-text h1) {
-        color: var(--dark-pure);
-        padding-right: 2em;
-        font-size: 1.6rem;
-        font-weight: 600;
-        margin-bottom: 0.25em;
-    }
-
-    :global(.project-text a) {
-        text-decoration: underline;
-        text-decoration-style: dotted;
-        text-decoration-color: var(--select-clr);
-        text-decoration-thickness: 1.5px;
-    }
-
-    :global(.project-text u) {
-        text-decoration-skip-ink: all;
-        text-decoration-thickness: 1.5px;
-        text-decoration-skip: spaces ink;
-    }
-
-    :global(.project-text li) {
-        list-style-type: "↪";
-        padding-inline-start: 0.75ch;
-    }
-
-    :global(.project-text p) {
-        margin-block-start: 0.5em;
-        margin-block-end: 0.5em;
-        word-wrap: break-word;
-    }
-
-    :global(.project-text b) {
-        font-weight: 600;
-    }
-
     .project-technologies {
+        flex-grow: 0;
+        flex-basis: 25%;
+        min-height: 50vh;
         padding: 1.5em 2.5em 1.5em 1.75em;
         border: 2px solid var(--dark-pure);
         border-radius: 2px;
@@ -166,6 +133,43 @@
         margin-bottom: 0.2em;
         list-style-type: "⤷";
         padding-inline-start: 1ch;
+    }
+
+    :global(.project-text h1) {
+        color: var(--dark-pure);
+        padding-right: 2em;
+        font-size: 1.6rem;
+        font-weight: 600;
+        margin-bottom: 0.25em;
+    }
+
+    :global(.project-text a) {
+        text-decoration: underline;
+        text-decoration-style: dotted;
+        text-decoration-color: var(--select-clr);
+        text-decoration-thickness: 1.5px;
+    }
+
+    :global(.project-text u) {
+        text-decoration: underline;
+        text-decoration-skip-ink: all;
+        text-decoration-thickness: 1.5px;
+        text-decoration-skip: spaces ink;
+    }
+
+    :global(.project-text li) {
+        list-style-type: "↪";
+        padding-inline-start: 0.75ch;
+    }
+
+    :global(.project-text p) {
+        margin-block-start: 0.5em;
+        margin-block-end: 0.5em;
+        word-wrap: break-word;
+    }
+
+    :global(.project-text b) {
+        font-weight: bold;
     }
 
     @media (max-width: 650px) {

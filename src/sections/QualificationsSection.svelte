@@ -33,7 +33,7 @@
     ];
 </script>
 
-<section>
+<section class="flex">
     <div class="title flex">
         <h1>💡 QUALIFICATIONS</h1>
     </div>

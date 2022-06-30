@@ -70,11 +70,6 @@
 </section>
 
 <style>
-    .section {
-        flex-direction: column;
-        justify-content: center;
-    }
-
     .header {
         margin-bottom: auto;
     }

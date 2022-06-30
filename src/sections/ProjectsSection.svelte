@@ -106,7 +106,7 @@
     }
 </script>
 
-<section>
+<section class="flex">
     <div class="project-upper-header">
         <h1>🖊️ PROJECTS</h1>
     </div>
@@ -141,6 +141,7 @@
         border: solid 2px var(--dark-pure);
         margin-top: 0.5em;
         transition: transform 0.1s;
+        max-width: fit-content;
     }
 
     .project-previous-page h1 {
