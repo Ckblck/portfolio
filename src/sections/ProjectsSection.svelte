@@ -104,6 +104,14 @@
             index++;
         }
     }
+
+    function keyPress(event) {
+        const keyCode = event.keyCode;
+
+        if (keyCode != 32) return;
+
+        nextIndex();
+    }
 </script>
 
 <section class="flex">
@@ -115,6 +123,7 @@
         <h1 on:click={nextIndex}>NEXT PROJECT</h1>
     </div>
 </section>
+<svelte:window on:keypress={(event) => keyPress(event)} />
 
 <style>
     section {

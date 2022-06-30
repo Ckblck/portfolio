@@ -32,7 +32,7 @@
 <div class="container">
     <div class="logos flex">
         <div
-            class="discord copyable"
+            class="icon discord copyable"
             data-text="Ckblck#7622"
             on:click={(event) => handleClick(event)}
         >
@@ -42,7 +42,7 @@
                 alt="Discord logo for contact."
             />
         </div>
-        <div class="github">
+        <div class="icon github">
             <a href="https://github.com/Ckblck" target="_blank">
                 <img src="assets/github.png" alt="The github logo." />
             </a>
@@ -50,10 +50,10 @@
         <a
             href="mailto:me@ckblck.dev"
             data-text="me@ckblck.dev"
-            class="email copyable"
+            class="icon email copyable"
             on:click={(event) => handleClick(event)}
         >
-            ✉
+            <img src="assets/email.svg" alt="Email icon for contact." />
         </a>
     </div>
 </div>
@@ -73,6 +73,14 @@
     div {
         --visibility: hidden;
         --opacity: 0;
+    }
+
+    .icon {
+        transition: transform 0.1s;
+    }
+
+    .icon:hover {
+        transform: scale(1.15);
     }
 
     .logos {
@@ -98,10 +106,14 @@
 
     .email {
         position: relative;
-        font-size: 5.25rem;
         font-weight: 600;
         color: #23272a;
         line-height: 0;
+    }
+
+    .email img {
+        height: auto;
+        width: 100%;
     }
 
     .copyable {
@@ -117,9 +129,9 @@
         font-family: var(--ff-primary);
         font-weight: 500;
         white-space: nowrap;
-        bottom: -2.5em;
-        left: -1.25em;
-        font-size: 2.5rem;
+        bottom: -2.9em;
+        left: -1.5em;
+        font-size: 1.9rem;
         padding: 0.35em 0.45em 0.4em 0.25em;
         text-align: center;
         border-radius: 0.25em;
@@ -127,11 +139,9 @@
         color: var(--white-accent);
         transition: visibility 0.15s linear, opacity 0.1s linear;
         line-height: 1;
-        transform: rotate(-7deg);
     }
 
     .discord::after {
         bottom: -1.85em;
-        transform: rotate(10deg);
     }
 </style>
