@@ -131,7 +131,7 @@
 
     .project-tech-list li {
         margin-bottom: 0.2em;
-        list-style-type: "⤷";
+        list-style-type: "\2937";
         padding-inline-start: 1ch;
     }
 
@@ -158,7 +158,7 @@
     }
 
     :global(.project-text li) {
-        list-style-type: "↪";
+        list-style-type: "\21AA";
         padding-inline-start: 0.75ch;
     }
 

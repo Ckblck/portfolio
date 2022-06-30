@@ -37,7 +37,7 @@
 
     :global(.point-info li) {
         font-size: 1.15rem;
-        list-style-type: "↪";
+        list-style-type: "\21AA";
         padding-inline-start: 1ch;
     }
 
