@@ -97,7 +97,7 @@
 
 <style>
     .title {
-        font-size: clamp(0.75rem, 3vw, 1.5rem);
+        font-size: clamp(1rem, 3vw, 1.25rem);
         margin-bottom: 1.5em;
     }
 

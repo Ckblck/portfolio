@@ -56,7 +56,7 @@
         justify-content: center;
         scroll-snap-align: center;
         min-height: 100vh;
-        padding: 4em 7vw 4em clamp(4em, 9vw, 25em);
+        padding: 4em 7vw 4em clamp(4.65em, 9vw, 25em);
     }
 
     /* reset */
@@ -150,19 +150,19 @@
 
     @keyframes rainbow-fade {
         0% {
-            background-color: #fff385;
+            background-color: #fff6a9;
         }
         25% {
-            background-color: #adf9c9;
+            background-color: #bffbff;
         }
         50% {
-            background-color: #e8ff9b;
+            background-color: #c6ffbf;
         }
         75% {
-            background-color: #aad0ff;
+            background-color: #bee6ff;
         }
         100% {
-            background-color: #fff385;
+            background-color: #fff6a9;
         }
     }
 </style>

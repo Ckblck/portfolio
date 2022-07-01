@@ -29,14 +29,14 @@
     }
 
     :global(.point-info) {
-        font-size: clamp(1rem, 3vw, 1.25rem);
+        font-size: clamp(1.175rem, 3vw, 1.25rem);
         cursor: text;
         user-select: text;
         font-family: var(--ff-secondary);
     }
 
     :global(.point-info li) {
-        font-size: clamp(1rem, 3vw, 1.25rem);
+        font-size: clamp(1.175rem, 3vw, 1.25rem);
         list-style-type: "\21AA   ";
     }
 
@@ -53,7 +53,7 @@
 
     .point-title {
         line-height: 1em;
-        font-size: clamp(1.25rem, 3vw, 1.55rem);
+        font-size: clamp(1.35rem, 3vw, 1.55rem);
     }
 
     .point-title::after {
@@ -61,7 +61,7 @@
         letter-spacing: -0.005em;
         font-family: var(--ff-secondary);
         font-weight: 700;
-        font-size: clamp(0.9rem, 3vw, 1rem);
+        font-size: clamp(1rem, 3vw, 1.05rem);
         color: var(--select-clr);
         line-height: 1.75em;
     }
