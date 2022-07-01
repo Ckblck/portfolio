@@ -73,7 +73,7 @@
     }
 
     .intro-text {
-        font-size: 3rem;
+        font-size: clamp(2rem, 6vw, 3.25rem);
         font-weight: 300;
         max-width: 20ch;
         align-self: center;

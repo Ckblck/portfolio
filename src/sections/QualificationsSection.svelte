@@ -62,6 +62,8 @@
                 class="attribution-button"
                 on:click|self|stopPropagation={() =>
                     (attribution = !attribution)}
+                on:focus={() => (attribution = true)}
+                on:blur={() => (attribution = false)}
                 on:mouseleave={() => (attribution = false)}
                 on:mouseover={() => (attribution = true)}
             >
@@ -95,7 +97,7 @@
 
 <style>
     .title {
-        font-size: 1.25rem;
+        font-size: clamp(0.75rem, 3vw, 1.5rem);
         margin-bottom: 1.5em;
     }
 
@@ -109,18 +111,18 @@
     }
 
     .qualifications-list {
+        margin: 0;
         flex: 2 1 70vw;
-        margin-right: 2em;
     }
 
     .model-container {
-        flex: 1 2 35%;
+        flex: 1 2 clamp(5em, 25vw, 15em);
         flex-direction: column;
     }
 
     .model {
         width: inherit;
-        height: clamp(15em, 15em, 32vh);
+        height: clamp(5em, 25vw, 12em);
     }
 
     .attribution-button {
@@ -158,7 +160,11 @@
         color: var(--select-clr);
     }
 
-    @media (max-width: 650px) {
+    @media (max-width: 600px) {
+        .qualifications-list {
+            flex-basis: 100vw;
+        }
+
         .model,
         .attribution-button {
             display: none;

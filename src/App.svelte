@@ -56,7 +56,7 @@
         justify-content: center;
         scroll-snap-align: center;
         min-height: 100vh;
-        padding: 4em 7vw 4em clamp(5em, 10vw, 50em);
+        padding: 4em 7vw 4em clamp(4em, 9vw, 25em);
     }
 
     /* reset */
@@ -113,6 +113,10 @@
 
     :global(a:hover) {
         text-decoration: none;
+    }
+
+    :global(main, body) {
+        margin: 0 0 initial 0;
     }
 
     :global(main) {

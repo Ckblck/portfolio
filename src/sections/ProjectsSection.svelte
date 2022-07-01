@@ -136,7 +136,7 @@
 
     .project-upper-header h1 {
         font-family: var(--ff-secondary);
-        font-size: 1.15rem;
+        font-size: clamp(1rem, 4vw, 1.15rem);
         color: var(--dark-pure);
     }
 

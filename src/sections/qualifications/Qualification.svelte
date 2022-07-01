@@ -10,7 +10,7 @@
     }
 </script>
 
-<li class="point ">
+<li class="point">
     <div class="point-title {show ? 'hide' : 'show'}" on:click={click}>
         {qualificationObj.title}
     </div>
@@ -29,16 +29,15 @@
     }
 
     :global(.point-info) {
-        font-size: 1.25rem;
+        font-size: clamp(1rem, 3vw, 1.25rem);
         cursor: text;
         user-select: text;
         font-family: var(--ff-secondary);
     }
 
     :global(.point-info li) {
-        font-size: 1.15rem;
-        list-style-type: "\21AA";
-        padding-inline-start: 1ch;
+        font-size: clamp(1rem, 3vw, 1.25rem);
+        list-style-type: "\21AA   ";
     }
 
     :global(.point-info li::marker) {
@@ -54,7 +53,7 @@
 
     .point-title {
         line-height: 1em;
-        font-size: 1.4rem;
+        font-size: clamp(1.25rem, 3vw, 1.55rem);
     }
 
     .point-title::after {
@@ -62,7 +61,7 @@
         letter-spacing: -0.005em;
         font-family: var(--ff-secondary);
         font-weight: 700;
-        font-size: 0.9rem;
+        font-size: clamp(0.9rem, 3vw, 1rem);
         color: var(--select-clr);
         line-height: 1.75em;
     }

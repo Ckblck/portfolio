@@ -10,7 +10,7 @@
     .tag {
         border: 1px solid black;
         border-radius: 2px;
-        font-size: 0.9rem;
+        font-size: clamp(0.75rem, 2vw, 0.9rem);
         font-weight: 400;
         height: 100%;
         white-space: nowrap;
