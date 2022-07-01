@@ -16,7 +16,6 @@
     "postcss": "^8.4.14",
     "rollup": "^2.75.7",
     "rollup-plugin-babel": "^4.4.0",
-    "rollup-plugin-css-only": "^3.1.0",
     "rollup-plugin-img": "^1.1.0",
     "rollup-plugin-livereload": "^2.0.5",
     "rollup-plugin-postcss": "^4.0.2",

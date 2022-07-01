@@ -132,8 +132,7 @@
 
     .project-tech-list li {
         margin-bottom: 0.2em;
-        list-style-type: "\2937";
-        padding-inline-start: 1ch;
+        list-style-type: "\2937 ";
     }
 
     :global(.project-text h1) {
