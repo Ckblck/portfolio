@@ -6,6 +6,8 @@ import css from "rollup-plugin-css-only";
 import image from "rollup-plugin-img";
 import babel from "rollup-plugin-babel";
 import babelrc from "babelrc-rollup";
+import postcss from "rollup-plugin-postcss";
+import postcssPresetEnv from "postcss-preset-env";
 
 const production = !process.env.ROLLUP_WATCH;
 
@@ -43,6 +45,15 @@ export default {
         file: "public/build/bundle.js",
     },
     plugins: [
+        postcss({
+            plugins: [
+                postcssPresetEnv({
+                    browsers: "> 0.25%, not dead",
+                }),
+            ],
+            extract: true,
+            extract: "bundle.css",
+        }),
         babel(
             babelrc({
                 addExternalHelpersPlugin: false,
@@ -61,7 +72,6 @@ export default {
         }),
         // we'll extract any component CSS out into
         // a separate file - better for performance
-        css({ output: "bundle.css" }),
 
         // If you have external dependencies installed from
         // npm, you'll most likely need these plugins. In
