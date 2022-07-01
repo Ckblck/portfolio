@@ -4,6 +4,8 @@ import resolve from "@rollup/plugin-node-resolve";
 import livereload from "rollup-plugin-livereload";
 import css from "rollup-plugin-css-only";
 import image from "rollup-plugin-img";
+import babel from "rollup-plugin-babel";
+import babelrc from "babelrc-rollup";
 
 const production = !process.env.ROLLUP_WATCH;
 
@@ -41,6 +43,13 @@ export default {
         file: "public/build/bundle.js",
     },
     plugins: [
+        babel(
+            babelrc({
+                addExternalHelpersPlugin: false,
+                exclude: /node_modules/,
+                runtimeHelpers: false,
+            })
+        ),
         svelte({
             compilerOptions: {
                 // enable run-time checks when not in production
@@ -72,10 +81,6 @@ export default {
         // Watch the `public` directory and refresh the
         // browser on changes when not in production
         !production && livereload("public"),
-
-        // If we're building for production (npm run build
-        // instead of npm run dev), minify // me -> terser() removed.
-        production,
     ],
     watch: {
         clearScreen: false,

@@ -8,9 +8,13 @@
     "start": "sirv public --no-clear"
   },
   "devDependencies": {
+    "@babel/core": "^7.18.6",
+    "@babel/preset-env": "^7.18.6",
     "@rollup/plugin-commonjs": "^22.0.1",
     "@rollup/plugin-node-resolve": "^13.3.0",
+    "babelrc-rollup": "^3.0.0",
     "rollup": "^2.75.7",
+    "rollup-plugin-babel": "^4.4.0",
     "rollup-plugin-css-only": "^3.1.0",
     "rollup-plugin-img": "^1.1.0",
     "rollup-plugin-livereload": "^2.0.5",
