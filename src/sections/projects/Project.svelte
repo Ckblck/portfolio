@@ -115,6 +115,7 @@
         padding: 1.5em 2.5em 1.5em 1.75em;
         border: 2px solid var(--dark-pure);
         border-radius: 2px;
+        background-color: rgba(255, 255, 255, 0.08);
     }
 
     .project-tech-title {

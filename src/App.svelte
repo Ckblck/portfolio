@@ -44,6 +44,13 @@
 <Footer />
 
 <style>
+    :global(html) {
+        animation-name: rainbow-fade;
+        animation-direction: normal;
+        animation-duration: 35s;
+        animation-iteration-count: infinite;
+    }
+
     :global(section) {
         flex-direction: column;
         justify-content: center;
@@ -108,10 +115,6 @@
         text-decoration: none;
     }
 
-    :global(html) {
-        background-color: var(--main-clr);
-    }
-
     :global(main) {
         font-family: var(--ff-primary);
         color: var(--dark-pure);
@@ -139,5 +142,23 @@
 
     :global(::-webkit-scrollbar-corner) {
         background: transparent;
+    }
+
+    @keyframes rainbow-fade {
+        0% {
+            background-color: #fff385;
+        }
+        25% {
+            background-color: #adf9c9;
+        }
+        50% {
+            background-color: #e8ff9b;
+        }
+        75% {
+            background-color: #aad0ff;
+        }
+        100% {
+            background-color: #fff385;
+        }
     }
 </style>

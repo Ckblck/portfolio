@@ -18,11 +18,11 @@
         padding: 0.15em 0.2em;
         margin-block-start: 0.25em;
         margin-right: 0.25em;
-        background-color: #ffbf00;
+        background-color: rgb(255 255 255 / 15%);
         transition: background-color 0.1s;
     }
 
     .tag:hover {
-        background-color: var(--light-pure);
+        background-color: rgb(255 242 128 / 80%);
     }
 </style>
