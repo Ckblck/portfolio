@@ -2,9 +2,11 @@ import svelte from "rollup-plugin-svelte";
 import commonjs from "@rollup/plugin-commonjs";
 import resolve from "@rollup/plugin-node-resolve";
 import livereload from "rollup-plugin-livereload";
-import { terser } from "rollup-plugin-terser";
-import css from "rollup-plugin-css-only";
 import image from "rollup-plugin-img";
+import babel from "rollup-plugin-babel";
+import babelrc from "babelrc-rollup";
+import postcss from "rollup-plugin-postcss";
+import postcssPresetEnv from "postcss-preset-env";
 
 const production = !process.env.ROLLUP_WATCH;
 
@@ -42,6 +44,22 @@ export default {
         file: "public/build/bundle.js",
     },
     plugins: [
+        postcss({
+            plugins: [
+                postcssPresetEnv({
+                    browsers: "> 0.25%, not dead",
+                }),
+            ],
+            extract: true,
+            extract: "bundle.css",
+        }),
+        babel(
+            babelrc({
+                addExternalHelpersPlugin: false,
+                exclude: /node_modules/,
+                runtimeHelpers: false,
+            })
+        ),
         svelte({
             compilerOptions: {
                 // enable run-time checks when not in production
@@ -53,7 +71,6 @@ export default {
         }),
         // we'll extract any component CSS out into
         // a separate file - better for performance
-        css({ output: "bundle.css" }),
 
         // If you have external dependencies installed from
         // npm, you'll most likely need these plugins. In
@@ -73,10 +90,6 @@ export default {
         // Watch the `public` directory and refresh the
         // browser on changes when not in production
         !production && livereload("public"),
-
-        // If we're building for production (npm run build
-        // instead of npm run dev), minify
-        production && terser(),
     ],
     watch: {
         clearScreen: false,

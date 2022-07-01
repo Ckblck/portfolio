@@ -48,16 +48,16 @@
 
 <style>
     .project-title {
-        font-size: 1.85rem;
+        font-size: clamp(1.5rem, 5vw, 1.85rem);
         font-weight: 600;
     }
 
     .project-status {
         color: var(--status-clr);
-        font-size: 0.95rem;
+        font-size: clamp(0.75rem, 3vw, 0.95rem);
         font-weight: 400;
-        margin-top: 0;
-        margin-bottom: 0.5rem;
+        margin-top: 0.25em;
+        margin-bottom: 0.75em;
     }
 
     :global(.project-text a) {
@@ -90,7 +90,7 @@
     .project-content {
         flex-wrap: wrap;
         flex-shrink: 1;
-        margin: 1.5em 0;
+        margin: 1em 0;
         gap: 1em;
     }
 
@@ -105,7 +105,7 @@
         font-family: var(--ff-secondary);
         max-height: 50vh;
         font-weight: 300;
-        font-size: 1.4rem;
+        font-size: clamp(1rem, 5vw, 1.4rem);
     }
 
     .project-technologies {
@@ -115,30 +115,31 @@
         padding: 1.5em 2.5em 1.5em 1.75em;
         border: 2px solid var(--dark-pure);
         border-radius: 2px;
+        background-color: rgba(255, 255, 255, 0.08);
     }
 
     .project-tech-title {
+        font-size: clamp(1.15rem, 5vw, 1.3rem);
         font-weight: 500;
     }
 
     .project-tech-list {
         list-style-type: "\2022   ";
         font-weight: 400;
-        font-size: 1.1rem;
-        margin-top: 0.75em;
+        font-size: clamp(0.95rem, 5vw, 1.1rem);
+        margin-top: 1em;
         padding-left: 1.65em;
     }
 
     .project-tech-list li {
         margin-bottom: 0.2em;
-        list-style-type: "\2937";
-        padding-inline-start: 1ch;
+        list-style-type: "\2937   ";
     }
 
     :global(.project-text h1) {
         color: var(--dark-pure);
         padding-right: 2em;
-        font-size: 1.6rem;
+        font-size: clamp(1.2rem, 5vw, 1.6rem);
         font-weight: 600;
         margin-bottom: 0.25em;
     }
@@ -158,7 +159,7 @@
     }
 
     :global(.project-text li) {
-        list-style-type: "\21AA";
+        list-style-type: "\21AA   ";
         padding-inline-start: 0.75ch;
     }
 

@@ -63,31 +63,20 @@
             <span class="weight-400">Ckblck</span>, a straightforward Java
             developer.
         </div>
-        <div class="intro-logo">
-            <img alt="" src="assets/full-logo.svg" />
-        </div>
     </div>
 </section>
 
 <style>
-    .header {
-        margin-bottom: auto;
-    }
-
+    .header,
     .intro {
         margin-bottom: auto;
     }
 
     .intro-text {
-        font-size: 3rem;
+        font-size: clamp(2rem, 6vw, 3.25rem);
         font-weight: 300;
         max-width: 20ch;
         align-self: center;
-    }
-
-    .intro-logo {
-        display: block;
-        margin-left: auto;
     }
 
     .wave {
@@ -138,12 +127,6 @@
 
         100% {
             transform: rotate(0deg);
-        }
-    }
-
-    @media (max-width: 900px) {
-        .intro-logo {
-            display: none;
         }
     }
 </style>

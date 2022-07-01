@@ -24,6 +24,7 @@
     }
 
     .ul {
+        padding: 0;
         margin-bottom: 0.2em;
     }
 
