@@ -75,6 +75,11 @@
         --opacity: 0;
     }
 
+    img {
+        width: auto;
+        height: auto;
+    }
+
     .icon {
         transition: transform 0.1s;
     }
@@ -123,13 +128,13 @@
 
     .copyable::after {
         position: absolute;
-        content: "✔️ Copied!";
+        content: "\2714 Copied!";
         visibility: var(--visibility);
         opacity: var(--opacity);
         font-family: var(--ff-primary);
         font-weight: 500;
         white-space: nowrap;
-        bottom: -2.9em;
+        bottom: -2em;
         left: -1.5em;
         font-size: 1.9rem;
         padding: 0.35em 0.45em 0.4em 0.25em;
@@ -142,6 +147,6 @@
     }
 
     .discord::after {
-        bottom: -1.85em;
+        bottom: -1.9em;
     }
 </style>
